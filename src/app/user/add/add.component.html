@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="d-flex justify-content-center h-100">
+    <div class="card">
+      <div class="card-header">
+        <h2 class="text-center">Agregar usuario</h2>
+      </div>
+      <div class="card-body">
+        <div class="col-md-12 user-container">
+          <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <input type="text" formControlName="username" placeholder="username" name="username" class="form-control"
+                id="username">
+            </div>
+
+            <div class="form-group">
+              <input type="password" formControlName="password" placeholder="password" name="password"
+                class="form-control" id="password">
+            </div>
+
+            <div class="form-group">
+              <input formControlName="firstName" placeholder="First Name" name="firstName" class="form-control"
+                id="firstName">
+            </div>
+
+            <div class="form-group">
+              <input formControlName="lastName" placeholder="Last name" name="lastName" class="form-control"
+                id="lastName">
+            </div>
+
+            <div class="form-group">
+              <input type="number" formControlName="age" placeholder="age" name="age" class="form-control" id="age">
+            </div>
+
+            <div class="form-group">
+              <input type="number" formControlName="salary" placeholder="salary" name="salary" class="form-control"
+                id="salary">
+            </div>
+
+            <button class="btn btn-success">Guardar</button>
+            <div>
+              <a [routerLink]="['/']">Login</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
